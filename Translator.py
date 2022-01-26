@@ -25,7 +25,6 @@ def convert():
     try:
         translators = Translator()
         translation = translators.translate(inp_str.get('1.0','end'), dest=opt.get())
-        print(translation.text)
         out_str.insert(END,translation.text)
     except:
         tmsg.showerror("Error", "something went wrong")
@@ -41,7 +40,6 @@ def start():
     main_frame = Frame(root, bg="gray")
     main_frame.pack(padx=10, pady=5, fill=BOTH)
     Label(main_frame, text="Enter the text in English", bg="purple", font=('tacoma',15,'bold')).pack(padx=5, pady=5)
-    
     inp_frame = Frame(main_frame)
     inp_frame.pack()
     scrollbar = Scrollbar(inp_frame)
