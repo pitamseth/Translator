@@ -27,7 +27,6 @@ def convert():
         translation = translators.translate(inp_str.get('1.0','end'), dest=opt.get())
         out_str.insert(END,translation.text)
     except:
-        tmsg.showerror("Error", "something went wrong")
         check_internet()
 
 def start():
